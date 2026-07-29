@@ -69,12 +69,17 @@
     text-align: center;
     gap: 14px;
   }
+  .icon-link { display: inline-block; border-radius: 22px; }
   .icon {
     width: 96px;
     height: 96px;
     border-radius: 22px;
     object-fit: cover;
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    display: block;
+  }
+  .store-badge {
+    height: 50px;
   }
   .icon-placeholder {
     width: 96px;
@@ -137,22 +142,27 @@
 <body>
 <header>
   <h1>dabeege.apps</h1>
-  <p>Small apps, built one at a time.</p>
 </header>
 <main>
 
   <section class="card">
-    <img class="icon" src="/whendil-icon.png" alt="Whendil app icon">
+    <a class="icon-link" href="https://whendil.dabeege.com">
+      <img class="icon" src="/whendil-icon.png" alt="Whendil app icon">
+    </a>
     <h2>WHENDIL</h2>
     <p class="tagline">When Did I Last...</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="https://apps.apple.com/us/app/whendil/id6789949420">Download on the App Store</a>
+      <a href="https://apps.apple.com/us/app/whendil/id6789949420">
+        <img class="store-badge" src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store">
+      </a>
       <span class="badge">Google Play — Coming Soon</span>
     </div>
   </section>
 
   <section class="card">
-    <img class="icon" src="/aislepro-icon.png" alt="AislePro app icon">
+    <a class="icon-link" href="https://aislepro.dabeege.com">
+      <img class="icon" src="/aislepro-icon.png" alt="AislePro app icon">
+    </a>
     <h2>AislePro</h2>
     <p class="tagline">Grocery lists sorted by aisle.</p>
     <div class="cta-row">
@@ -162,7 +172,8 @@
 
 </main>
 <footer>
-  &copy; 2026 dabeege.apps
+  &copy; 2026 dabeege.apps<br>
+  App Store&reg; is a service mark of Apple Inc., registered in the U.S. and other countries.
 </footer>
 </body>
 </html>
