@@ -69,7 +69,6 @@
     text-align: center;
     gap: 14px;
   }
-  .icon-link { display: inline-block; border-radius: 22px; }
   .icon {
     width: 96px;
     height: 96px;
@@ -131,6 +130,12 @@
     background: var(--badge-bg);
     color: var(--badge-fg);
   }
+  .links {
+    font-size: 0.85rem;
+    color: var(--fg-muted);
+    margin-top: 4px;
+  }
+  .links a { color: inherit; margin: 0 6px; }
   footer {
     text-align: center;
     padding: 0 24px 48px;
@@ -146,9 +151,7 @@
 <main>
 
   <section class="card">
-    <a class="icon-link" href="https://whendil.dabeege.com">
-      <img class="icon" src="/whendil-icon.png" alt="Whendil app icon">
-    </a>
+    <img class="icon" src="/whendil-icon.png" alt="Whendil app icon">
     <h2>WHENDIL</h2>
     <p class="tagline">When Did I Last...</p>
     <div class="cta-row">
@@ -157,17 +160,17 @@
       </a>
       <span class="badge">Google Play — Coming Soon</span>
     </div>
+    <p class="links"><a href="/whendil/privacy">Privacy</a> · <a href="/whendil/terms">Terms</a> · <a href="/whendil/delete-account">Delete Account</a></p>
   </section>
 
   <section class="card">
-    <a class="icon-link" href="https://aislepro.dabeege.com">
-      <img class="icon" src="/aislepro-icon.png" alt="AislePro app icon">
-    </a>
+    <img class="icon" src="/aislepro-icon.png" alt="AislePro app icon">
     <h2>AislePro</h2>
     <p class="tagline">Grocery lists sorted by aisle.</p>
     <div class="cta-row">
       <span class="badge">In Development</span>
     </div>
+    <p class="links"><a href="/aislepro/privacy">Privacy</a> · <a href="/aislepro/terms">Terms</a></p>
   </section>
 
 </main>
