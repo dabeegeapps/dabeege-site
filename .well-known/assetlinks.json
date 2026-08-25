@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.whendil.app",
+      "sha256_cert_fingerprints": [
+        "CD:96:C1:9E:13:FC:76:58:3B:97:34:D9:12:D0:B7:52:39:F7:1F:8F:D2:01:D3:DC:51:49:39:89:D5:7F:64:D0"
+      ]
+    }
+  }
+]
