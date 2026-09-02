@@ -43,7 +43,7 @@
   <h1>Privacy Policy</h1>
 </header>
 <main>
-  <p class="meta">WHENDIL — Last updated July 30, 2026</p>
+  <p class="meta">WHENDIL — Last updated September 1, 2026</p>
 
   <p>WHENDIL ("we", "our", or "the app") is a simple elapsed-time tracker that helps you remember when you last did things. This policy explains what information we collect, how we use it, and your choices.</p>
 
@@ -60,7 +60,7 @@
   </ul>
   <p>We also collect:</p>
   <ul>
-    <li><strong>Crash reports</strong> — if the app crashes, anonymous diagnostic data is sent to Sentry to help us fix bugs. This does not include your tracker content.</li>
+    <li><strong>Crash reports</strong> — if the app crashes, diagnostic data is sent to Sentry to help us fix bugs. This does not include your tracker content. <strong>See "Crash Reporting and Approximate Location" below</strong> for the one piece of location data this involves.</li>
   </ul>
 
   <h2>How We Use Your Information</h2>
@@ -76,8 +76,12 @@
     <li><strong>Supabase</strong> — our backend database and authentication provider. Your account and tracker data are stored on Supabase servers. See <a href="https://supabase.com/privacy">supabase.com/privacy</a>.</li>
     <li><strong>Google Sign-In</strong> — optional sign-in method. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
     <li><strong>Apple Sign In</strong> — optional sign-in method on iOS and web. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
-    <li><strong>Sentry</strong> — crash reporting. See <a href="https://sentry.io/privacy/">sentry.io/privacy</a>.</li>
+    <li><strong>Sentry</strong> — crash reporting. Sentry derives an approximate location from crash reports — see the section below. See <a href="https://sentry.io/privacy/">sentry.io/privacy</a>.</li>
   </ul>
+
+  <h2>Crash Reporting and Approximate Location</h2>
+  <p>When the app sends a crash report, <strong>we instruct Sentry not to store your IP address, and it does not.</strong> Sentry's servers do, however, <strong>derive an approximate location from the network the report arrives over — city, region and country — and store that on the crash event.</strong></p>
+  <p><strong>This is coarse, and it is not GPS.</strong> It comes from the network connection, not from your device's location services, which this app never requests. We use it only to tell whether a fault is specific to one region or one build.</p>
 </main>
 </body>
 </html>
