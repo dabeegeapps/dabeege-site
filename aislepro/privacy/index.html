@@ -43,7 +43,7 @@
   <h1>Privacy Policy</h1>
 </header>
 <main>
-  <p class="meta">AISLEPRO — Last updated September 1, 2026</p>
+  <p class="meta">AISLEPRO — Last updated October 4, 2026</p>
 
   <p>AISLEPRO ("we", "our", or "the app") is a grocery list app that lets you tag items with store locations so shopping can happen without backtracking. This policy explains what information we collect, how we use it, and your choices.</p>
 
@@ -67,6 +67,15 @@
     <li><strong>An anonymous device identifier</strong>, so repeat reports from one device can be recognised. It is not linked to you and identifies nobody by name.</li>
     <li><strong>Technical details about the running app</strong> — app version, release channel, update identifier, whether the build is running an update, platform and OS version, screen size <strong>rounded to the nearest 50 points</strong>, pixel ratio, text-scaling setting, and device locale.</li>
   </ul>
+  <p>How the app is used (usage analytics):</p>
+  <ul>
+    <li><strong>Which features you use, as counts and labels only</strong> — that the app was opened, that the upgrade screen was opened, that an item was added, that a store was created, that an item was marked purchased, and that an upgrade completed. Alongside these we record simple values such as how many stores you have, and whether an added item went onto your list or into your library.</li>
+    <li><strong>We never send anything you typed.</strong> No item names, no brands, no quantities, no notes, no store names, no tags, no aisle or department labels.</li>
+    <li><strong>The same anonymous device identifier</strong> described above is attached, so repeated use from one device can be counted once. It is created by the app, changes if you reinstall, and is not your account id.</li>
+    <li><strong>Basic build information</strong> — app version, build number, app name and package name, and whether the device is a phone or a tablet.</li>
+  </ul>
+  <p>What the analytics deliberately does <strong>not</strong> send: your device's model or manufacturer, your operating system version, your language or time zone, and no automatic screen or tap recording. Everything sent is an explicit, named event.</p>
+
   <p>What we deliberately do not collect:</p>
   <ul>
     <li><strong>Your device's name</strong>, which is frequently a person's real name.</li>
@@ -80,6 +89,7 @@
     <li>To provide the app's core functionality (storing and syncing your lists, stores, and purchase history).</li>
     <li>To suggest items to re-add based on your own purchase history.</li>
     <li>To diagnose crashes and errors, and to understand and act on bug reports you choose to send.</li>
+    <li>To understand which features are actually used, so we know what to improve.</li>
   </ul>
   <p>We do not sell your data. We do not use your data for advertising.</p>
 
@@ -89,12 +99,14 @@
     <li><strong>Google Sign-In</strong> — optional sign-in method. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
     <li><strong>Apple Sign In</strong> — optional sign-in method. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
     <li><strong>Sentry</strong> — crash and error reporting, used to find and fix faults. Sentry derives an approximate location from crash reports — see the section below. See <a href="https://sentry.io/privacy/">sentry.io/privacy</a>.</li>
+    <li><strong>PostHog</strong> — product analytics, used to count how features are used. It receives the named events described above and no content you typed. See <a href="https://posthog.com/privacy">posthog.com/privacy</a>.</li>
     <li><strong>Resend</strong> — delivers our sign-in emails and notifies us when you send a report. See <a href="https://resend.com/legal/privacy-policy">resend.com/legal/privacy-policy</a>.</li>
   </ul>
 
-  <h2>Crash Reporting and Approximate Location</h2>
+  <h2>Approximate Location from Crash Reports and Analytics</h2>
   <p>When the app sends a crash or error report, <strong>we instruct Sentry not to store your IP address, and it does not.</strong> Sentry's servers do, however, <strong>derive an approximate location from the network the report arrives over — city, region and country — and store that on the crash event.</strong></p>
   <p><strong>This is coarse, and it is not GPS.</strong> It comes from the network connection, not from your device's location services, which this app never requests. We use it only to tell whether a fault is specific to one region or one build.</p>
+  <p><strong>The same may apply to our analytics provider.</strong> Where a provider derives an approximate city, region or country from the network a request arrives over, that is the only location information involved. <strong>Neither crash reporting nor analytics uses your device's location services, and the app never asks for them.</strong></p>
 
   <h2>Your Choices</h2>
   <ul>
