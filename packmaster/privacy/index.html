@@ -43,7 +43,7 @@
   <h1>Privacy Policy</h1>
 </header>
 <main>
-  <p class="meta">PackMaster — Last updated September 15, 2026</p>
+  <p class="meta">PackMaster — Last updated October 9, 2026</p>
 
   <p>PackMaster ("we", "our", or "the app") is a reusable packing-list app: you keep a library of items grouped by trip, and check them off as you pack. This policy explains what information we collect, how we use it, and your choices.</p>
 
@@ -62,6 +62,7 @@
   <p>We also collect:</p>
   <ul>
     <li><strong>Crash reports</strong> — if the app crashes, diagnostic data is sent to Sentry to help us fix bugs. This does not include the contents of your lists. <strong>See "Crash Reporting and Approximate Location" below</strong> for the one piece of location data this involves.</li>
+    <li><strong>Fault and usage events</strong> — a small, fixed set of signals about things going wrong in the app, and when the app is opened, updated or installed. <strong>See "Fault and Usage Reporting" below</strong> for the complete list and what each one contains.</li>
   </ul>
 
   <h2>Upgrades and Purchases</h2>
@@ -76,8 +77,9 @@
   <h2>What We Do Not Collect</h2>
   <p>Stated plainly, because these are easy to assume:</p>
   <ul>
-    <li><strong>No device identifier.</strong> The app does not create or send a persistent device or advertising ID.</li>
-    <li><strong>No analytics, and no advertising.</strong> There is no analytics SDK in the app and no ads of any kind.</li>
+    <li><strong>No advertising identifier.</strong> The app never reads your device's advertising ID, and nothing it collects is used for advertising or sold to anyone.</li>
+    <li><strong>No tracking of what you pack.</strong> The fault and usage events described below carry counts and labels only. <strong>The names of your trips, your items, your notes and your custom fields are never part of them.</strong></li>
+    <li><strong>No session recording.</strong> Nothing records your screen, your taps or your typing.</li>
     <li><strong>No location services.</strong> The app never asks for access to your device's location. The one exception is described below, and it comes from the network rather than from your device.</li>
     <li><strong>No notifications, contacts, photos, camera or microphone access.</strong></li>
   </ul>
@@ -86,6 +88,7 @@
   <ul>
     <li>To provide the app's core functionality — storing your lists and syncing them to your account.</li>
     <li>To diagnose and fix crashes and bugs.</li>
+    <li>To find faults that do not crash the app — the kind where the screen says something worked and it did not.</li>
   </ul>
   <p>We do not sell your data. We do not use your data for advertising.</p>
 
@@ -94,12 +97,28 @@
     <li><strong>Supabase</strong> — our backend database and authentication provider. Your account and list data are stored on Supabase servers. See <a href="https://supabase.com/privacy">supabase.com/privacy</a>.</li>
     <li><strong>Google Sign-In</strong> — optional sign-in method. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
     <li><strong>Apple Sign In</strong> — optional sign-in method. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
+    <li><strong>PostHog</strong> — fault and usage reporting, described below. See <a href="https://posthog.com/privacy">posthog.com/privacy</a>.</li>
     <li><strong>Sentry</strong> — crash reporting. Sentry derives an approximate location from crash reports — see the section below. See <a href="https://sentry.io/privacy/">sentry.io/privacy</a>.</li>
   </ul>
 
   <h2>Crash Reporting and Approximate Location</h2>
   <p>When the app sends a crash report, <strong>your IP address is not stored on it.</strong> Sentry's servers do, however, <strong>derive an approximate location from the network the report arrives over — city, region and country — and store that on the crash event.</strong></p>
   <p><strong>This is coarse, and it is not GPS.</strong> It comes from the network connection, not from your device's location services, which this app never requests. We use it only to tell whether a fault is specific to one region or one build.</p>
+
+  <h2>Fault and Usage Reporting</h2>
+  <p>Some faults never crash the app. The screen says a thing was deleted and it is still there; a sign-in quietly fails; work queues up and never reaches the server. <strong>Nothing reports those, so we send a small fixed set of events to a service called PostHog to tell us when they happen to real people.</strong></p>
+  <p><strong>This is the complete list. There are no others, and each one is sent only at the moment that thing goes wrong:</strong></p>
+  <ul>
+    <li>A delete removed nothing.</li>
+    <li>Work queued up offline and stopped draining.</li>
+    <li>Moving a guest list onto an account failed.</li>
+    <li>A sign-in did not complete — with which method was used.</li>
+    <li>"Start packing" ran and added nothing.</li>
+    <li>A custom field name did not save.</li>
+  </ul>
+  <p><strong>What rides along with them is counts and labels, never content</strong> — how many items were involved, how many characters long a name was, which of the three sign-in methods was tried. The app also records when it is installed, updated and opened, and the kind of device it is running on (phone or tablet).</p>
+  <p><strong>These events are tied to your account</strong>, because the question they answer is whether one person is hitting the same fault repeatedly. <strong>Before you sign in, the app creates a random identifier for this installation</strong> so the same thing can be answered for a guest. It is a random value created by the app, not a hardware or advertising ID, it is tied to nothing outside PackMaster, and it is gone when you uninstall.</p>
+  <p><strong>PostHog is able to estimate a location from the network a report arrives over, and we have switched that off</strong> — so unlike the crash reports described above, these events carry no location at all.</p>
 
   <h2>Deleting Your Data</h2>
   <p>You can delete your account and everything in it from inside the app — see <a href="/packmaster/delete-account">Delete Account</a> for the steps. This removes your trips and items from our servers permanently, and it applies whether or not you ever signed in.</p>
