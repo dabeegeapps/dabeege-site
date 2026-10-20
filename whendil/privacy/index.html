@@ -43,7 +43,7 @@
   <h1>Privacy Policy</h1>
 </header>
 <main>
-  <p class="meta">WHENDIL — Last updated September 15, 2026</p>
+  <p class="meta">WHENDIL — Last updated October 20, 2026</p>
 
   <p>WHENDIL ("we", "our", or "the app") is a simple elapsed-time tracker that helps you remember when you last did things. This policy explains what information we collect, how we use it, and your choices.</p>
 
@@ -70,6 +70,7 @@
     <li>To send local push notifications for reminders you configure.</li>
     <li>To diagnose and fix crashes and bugs.</li>
     <li>To read and act on feedback you choose to send us.</li>
+    <li>To understand which features are actually used, and where people get stuck, so we know what to fix.</li>
   </ul>
   <p>We do not sell your data. We do not use your data for advertising.</p>
 
@@ -79,11 +80,21 @@
     <li><strong>Google Sign-In</strong> — optional sign-in method. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
     <li><strong>Apple Sign In</strong> — optional sign-in method on iOS and web. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
     <li><strong>Sentry</strong> — crash reporting. Sentry derives an approximate location from crash reports — see the section below. See <a href="https://sentry.io/privacy/">sentry.io/privacy</a>.</li>
+    <li><strong>PostHog</strong> — product analytics, used to count how features are used. It receives the named events described below. See <a href="https://posthog.com/privacy">posthog.com/privacy</a>.</li>
   </ul>
 
   <h2>Crash Reporting and Approximate Location</h2>
   <p>When the app sends a crash report, <strong>we instruct Sentry not to store your IP address, and it does not.</strong> Sentry's servers do, however, <strong>derive an approximate location from the network the report arrives over — city, region and country — and store that on the crash event.</strong></p>
   <p><strong>This is coarse, and it is not GPS.</strong> It comes from the network connection, not from your device's location services, which this app never requests. We use it only to tell whether a fault is specific to one region or one build.</p>
+
+
+  <h2>Usage Analytics</h2>
+  <p><strong>The app reports a small, fixed list of things that happen — not what you track.</strong> We use it to see which features are used and where people get stuck. It is handled by PostHog on our behalf.</p>
+  <p>The events are: choosing how to sign in, finishing or skipping onboarding, creating a tracker, logging a completion, opening or dismissing the upgrade screen, a sync stalling, and a save failing. The app also reports when it is installed, updated and opened.</p>
+  <p><strong>What rides along with them:</strong> the anonymous per-install identifier described above, your app version and build, your device model and manufacturer, your operating system and its version, and whether the app is running on a simulator. <strong>Not your name, not your email, not your account id, and not the names or contents of your trackers.</strong></p>
+  <p><strong>One exception worth stating plainly.</strong> When a save fails, the app reports the error message it received, shortened to 200 characters, so we can tell one fault from another. These messages come from our database rather than from you, but we cannot promise one has never repeated a fragment of something you typed.</p>
+  <p><strong>No location.</strong> We explicitly switch off the location estimate our analytics provider would otherwise derive from your internet connection, and your IP address is discarded rather than stored. This is unlike crash reports, which are described in the section above.</p>
+  <p><strong>No advertising identifier is used, no ads are shown, and no session recording or screen capture of any kind takes place.</strong></p>
 
   <h2>What We Send With Your Feedback</h2>
   <p>When you tap <strong>Report a Bug</strong> or <strong>Suggest a Feature</strong>, we send your message and the following, so that a report can be reproduced without asking you follow-up questions:</p>
@@ -95,7 +106,7 @@
     <li><strong>Screen size, rounded</strong> into a broad bucket rather than exact dimensions.</li>
     <li><strong>Your app language.</strong></li>
   </ul>
-  <p><strong>None of this is sent unless you send feedback.</strong> It is not used for advertising or analytics, and it is never sold.</p>
+  <p><strong>None of this is sent unless you send feedback.</strong> It is never used for advertising and it is never sold. <strong>The anonymous device identifier above is the same one our usage analytics uses</strong> — see the section below; the rest of what is listed here goes nowhere but the bug report you sent.</p>
 </main>
 </body>
 </html>
