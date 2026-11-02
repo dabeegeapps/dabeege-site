@@ -54,7 +54,9 @@
   .cta-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    /* 14px: Google's badge guidance asks for clear space of one quarter of the
+       badge height on all sides — ~12.5px at the 49-50px these paint at. */
+    gap: 14px;
     align-items: center;
     margin: 24px 0;
   }

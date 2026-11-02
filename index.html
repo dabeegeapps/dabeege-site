@@ -108,7 +108,10 @@
   .cta-row {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    /* 14px: Google's badge guidance asks for clear space of one quarter of the
+       badge height on all sides. The badges paint at 49-50px tall here, so the
+       minimum is ~12.5px and the previous 10px was under it. */
+    gap: 14px;
     width: 100%;
     margin-top: 6px;
   }
