@@ -99,6 +99,7 @@
     <li><strong>Google Sign-In</strong> — optional sign-in method. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
     <li><strong>Apple Sign In</strong> — optional sign-in method. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
     <li><strong>PostHog</strong> — fault and usage reporting, described below. See <a href="https://posthog.com/privacy">posthog.com/privacy</a>.</li>
+    <li><strong>Resend</strong> — delivers the email that tells us you have sent a report. It receives the contents of that report. See <a href="https://resend.com/legal/privacy-policy">resend.com/legal/privacy-policy</a>.</li>
     <li><strong>Sentry</strong> — crash reporting. Sentry derives an approximate location from crash reports — see the section below. See <a href="https://sentry.io/privacy/">sentry.io/privacy</a>.</li>
   </ul>
 
@@ -129,7 +130,7 @@
     <li><strong>Technical details about the running app</strong> — app version, platform (iOS or Android), release channel, runtime version, update identifier, whether the build is running an over-the-air update, and whether it can receive them at all.</li>
   </ul>
   <p><strong>The contents of your lists are never attached to a report</strong> — no trip names, no item names, no notes, no custom fields. Only what you type into the report itself.</p>
-  <p><strong>Nothing is sent unless you write a report and send it</strong>, and reports are stored on Supabase alongside your account, where we read them to fix the app.</p>
+  <p><strong>Nothing is sent unless you write a report and send it.</strong> Reports are stored on Supabase alongside your account, and <strong>a copy is emailed to us so that we see it</strong> — that email carries your message and the details listed above, and it is delivered by Resend, listed under Third-Party Services. <strong>Nobody outside dabeege reads your report.</strong></p>
 
   <h2>Deleting Your Data</h2>
   <p>You can delete your account and everything in it from inside the app — see <a href="/packmaster/delete-account">Delete Account</a> for the steps. This removes your trips and items from our servers permanently, and it applies whether or not you ever signed in.</p>
